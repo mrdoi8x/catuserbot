@@ -103,10 +103,10 @@ async def bot_start(event):
                 my_mention=my_mention,
             )
         else:
-            start_msg = f"Hey! 👤{mention},\
-                        \nI am {my_mention}'s assistant bot.\
-                        \nYou can contact to my master from here.\
-                        \n\nPowered by [Catuserbot](https://t.me/catuserbot)"
+            start_msg = f"سلام! 👤{mention},\
+                        \n من {my_mention}'هستم .\
+                        \nاینجا میتونی با من در ارتباط باشی.....\
+                        \n\nیا پیویم [پیوی](https://t.me/binam012345)"
         buttons = [
             (
                 Button.url("i am", "https://t.me/binam012345"),

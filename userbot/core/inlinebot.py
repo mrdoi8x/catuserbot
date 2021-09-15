@@ -580,8 +580,6 @@ async def inline_handler(event):  # sourcery no-metrics
             title="SEYYED",
             description="I AM HERE",
             url="https://t.me/Binam012345",
-            thumb=photo,
-            content=photo,
             send_message=types.InputBotInlineMessageMediaAuto(
                 reply_markup=markup, message=text, entities=msg_entities
             ),

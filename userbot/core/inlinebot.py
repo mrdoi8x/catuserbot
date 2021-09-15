@@ -474,8 +474,6 @@ async def inline_handler(event):  # sourcery no-metrics
                     type="photo",
                     title=link,
                     description="⬇️ Click to Download",
-                    thumb=photo,
-                    content=photo,
                     send_message=types.InputBotInlineMessageMediaAuto(
                         reply_markup=markup, message=text, entities=msg_entities
                     ),

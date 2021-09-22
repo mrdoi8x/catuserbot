@@ -88,7 +88,7 @@ async def pussy(event):
     output = await _cattools.media_to_pic(event, reply_message)
     outputt = convert_toimage(output[1], filename="./temp/jisan.jpg")
     kakashi = await edit_or_reply(event, "```Processing....```")
-    async with event.client.conversation("@Lines50Bot") as conv:
+    async with event.client.conversation("@Havij_robot") as conv:
         try:
             msg = await conv.send_file(output_file)
             pic = await conv.get_response()

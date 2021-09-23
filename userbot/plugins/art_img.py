@@ -79,20 +79,28 @@ async def bad(event):
 async def pussy(event):
     "Make a media to line image"
     reply_message = await event.get_reply_message()
+    
+    c_id = await reply_id(event)
+    
+    
+    kakashi = await edit_or_reply(event, "```Processing....```")
     async with event.client.conversation("@Havij_robot") as conv:
         try:
-            msg = await conv.send_message(reply_message)
+            msg = await conv.send_file(reply_message)
             pic = await conv.get_response()
             await event.client.send_read_acknowledge(conv.chat_id)
-        
-        await event.client.send_message(
+        except YouBlockedUserError:
+            return await kakashi.edit("```Please unblock @Lines50Bot and try again```")
+        await kakashi.delete()
+        await event.client.send_file(
             event.chat_id,
             pic,
             reply_to=c_id,
             caption=f"**➥ Image Type :** LINE Art \n**➥ Uploaded By :** {mention}",
         )
     await event.client.delete_messages(conv.chat_id, [msg.id, pic.id])
-
+    #if os.path.exists(output_file):
+        #os.remove(output_file)
 
 
 @catub.cat_cmd(

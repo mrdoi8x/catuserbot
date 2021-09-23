@@ -37,7 +37,7 @@ plugin_category = "fun"
 # modified and developed by @mrconfused
 
 
-combot_stickers_url = "https://combot.org/telegram/smmnabot?q="
+combot_stickers_url = "https://combot.org/telegram/stickers?q="
 
 EMOJI_SEN = [
     "Можно отправить несколько смайлов в одном сообщении, однако мы рекомендуем использовать не больше одного или двух на каждый стикер.",
